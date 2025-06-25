@@ -1,13 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Instagram, Facebook } from 'lucide-react';
 
 const Footer: React.FC = () => {
-  const socialLinks = [
-    { icon: <Instagram className="w-5 h-5" />, name: "Instagram", url: "https://instagram.com" },
-    { icon: <Facebook className="w-5 h-5" />, name: "Facebook", url: "https://facebook.com" }
-  ];
-
   return (
     <footer className="py-16 bg-rose-700 text-white">
       <div className="container mx-auto px-4 text-center">
@@ -24,27 +18,17 @@ const Footer: React.FC = () => {
           </p>
 
           {/* Parceiros */}
-          <div className="mt-8">
-            <h3 className="text-lg font-semibold mb-2">Parceiros:</h3>
-            <p className="text-rose-100">Ágape Cerimonial</p>
+          <div className="mt-8 flex flex-col items-center space-y-4">
+            <h3 className="text-lg font-semibold">Parceiros:</h3>
+            <img
+              src="/assets/agape-logo.jpg"
+              alt="Logo Ágape Cerimonial"
+              className="w-32 h-auto rounded shadow-lg"
+            />
+            <p className="text-rose-100 font-medium">Ágape Cerimonial</p>
             <p className="text-rose-100">Contato: (31) 9 9249-4408</p>
           </div>
         </motion.div>
-
-        {/* Redes Sociais (se quiser manter) */}
-        {/* <div className="flex justify-center space-x-4">
-          {socialLinks.map((link, index) => (
-            <a
-              key={index}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-rose-300 transition-colors"
-            >
-              {link.icon}
-            </a>
-          ))}
-        </div> */}
       </div>
     </footer>
   );
