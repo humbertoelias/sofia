@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="py-16 bg-rose-700 text-white">
+    <footer className="py-16 pb-40 bg-rose-700 text-white">
       <div className="container mx-auto px-4 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
             <img
               src="/assets/agape-logo.jpg"
               alt="Logo Ágape Cerimonial"
-              className="w-32 h-auto rounded shadow-lg"
+              className="w-32 h-auto rounded-lg shadow-lg border-2 border-white"
             />
             <p className="text-rose-100 font-medium">Ágape Cerimonial</p>
             <p className="text-rose-100">Contato: (31) 9 9249-4408</p>
